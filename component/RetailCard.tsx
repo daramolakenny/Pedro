@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
+// import state from "@/data";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -30,7 +31,8 @@ const RetailCard: React.FC = () => {
   // Type for activeTab
   type TabKey = "retail-price-analysis" | "flights-analysis" | "depots-analysis" | "power-analysis" | "cargo-analysis";
   const [activeTab, setActiveTab] = useState<TabKey>("retail-price-analysis");
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isDailyModalOpen, setIsDailyModalOpen] = useState<boolean>(false);
+  const [isDetailedModalOpen, setIsDetailedModalOpen] = useState<boolean>(false);
   const [selectedRegion, setSelectedRegion] = useState<DropdownOption | null>(null);
   const [selectedState, setSelectedState] = useState<DropdownOption | null>(null);
   const [selectedPrice, setSelectedPrice] = useState<DropdownOption | null>(null);
@@ -52,6 +54,7 @@ const RetailCard: React.FC = () => {
     { value: "east", label: "Eastern Region" },
     { value: "west", label: "Western Region" },
   ];
+//   const states: DropdownOption[] = state;
   const states: DropdownOption[] = [
     { value: "lagos", label: "Lagos" },
     { value: "kano", label: "Kano" },
@@ -93,6 +96,7 @@ const RetailCard: React.FC = () => {
       data: "Here's a quick summary of the PMS (Premium Motor Spirit) - Petrol Market in Nigeria breaking down demand, supply, and regional trends",
       price: "#714.26",
       change: "+0.37 (+0.09%)",
+      date: "July 11, 2025",
     },
     detailed: {
       averagePriceLastWeek: "#713.89",
@@ -111,7 +115,7 @@ const RetailCard: React.FC = () => {
             <tbody>
               <tr
                 className="py-10 border-b border-[#24282c] hover:bg-[#0a0b0c] transition-colors duration-200 cursor-pointer"
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => setIsDailyModalOpen(true)}
               >
                 <td className="text-start text-white">
                   PMS <span className="font-medium text-[#5c5d5e] pl-2">Premium Motor Spirit</span>
@@ -216,7 +220,7 @@ const RetailCard: React.FC = () => {
         </div>
         <button
           className="bg-green-700 text-white py-2 px-4 rounded-lg hover:bg-green-600"
-          onClick={() => setIsModalOpen(true)}
+          onClick={() => setIsDetailedModalOpen(true)}
         >
           View Detailed Summary
         </button>
@@ -265,34 +269,109 @@ const RetailCard: React.FC = () => {
           </select>
         </div>
 
-        {/* Modal for PMS Detailed Summary */}
-        {isModalOpen && (
-          <div
-            className="fixed bg-black bg-opacity-50 flex items-end justify-end z-50"
-            style={{ bottom: "20px", right: "20px" }}
-          >
+        {/* Daily Summary Modal */}
+        {isDailyModalOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center z-50">
+                <div className="bg-[#020405] rounded-2xl p-6 w-full max-w-md">
+                <h3 className="text-lg font-semibold text-white mb-4">Daily Summary</h3>
+                <button
+                    className="text-white absolute top-4 right-4"
+                    onClick={() => setIsDailyModalOpen(false)}
+                >
+                    ✕
+                </button>
+                <h2 className="text-[#5c5d5e]">Heres a quick summary of the PMS(Premium Motor Spirit) - Petrol Market in Nigeria breaking down demand. Supply, and regional trends</h2>
+
+                <div className="space-y-4">
+                    <div className="flex justify-between text-white">
+                        <h4 className="text-md font-medium">Petrochem daily wire</h4>
+                        <h4 className="text-md font-medium">August 9, 2024</h4>
+                    </div>
+                    <p className="text-[#5c5d5e]">Nigeria consumes approximately 40-50 million liters of PMS per day. Demand is driven by: Transportation (70-80%): cars, buses, trucks, motorcycles.</p>
+                </div>
+
+                <div className="space-y-4">
+                    <div className="flex justify-between text-white">
+                        <h4 className="text-md font-medium">Petrochem daily wire</h4>
+                        <h4 className="text-md font-medium">August 9, 2024</h4>
+                    </div>
+                    <p className="text-[#5c5d5e]">Nigeria consumes approximately 40-50 million liters of PMS per day. Demand is driven by: Transportation (70-80%): cars, buses, trucks, motorcycles.</p>
+                </div>
+
+                <div className="space-y-4">
+                    <div className="flex justify-between text-white">
+                        <h4 className="text-md font-medium">Petrochem daily wire</h4>
+                        <h4 className="text-md font-medium">August 9, 2024</h4>
+                    </div>
+                    <p className="text-[#5c5d5e]">Nigeria consumes approximately 40-50 million liters of PMS per day. Demand is driven by: Transportation (70-80%): cars, buses, trucks, motorcycles.</p>
+                </div>
+
+                </div>
+            </div>
+        )}
+
+        {/* Detailed Summary Modal */}
+        {isDetailedModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center z-50">
             <div className="bg-[#020405] rounded-2xl p-6 w-full max-w-md">
               <h3 className="text-lg font-semibold text-white mb-4">Detailed Summary</h3>
               <button
                 className="text-white absolute top-4 right-4"
-                onClick={() => setIsModalOpen(false)}
+                onClick={() => setIsDetailedModalOpen(false)}
               >
                 ✕
               </button>
+
+              <h2 className="text-[#5c5d5e]">Heres a quick summary of the PMS(Premium Motor Spirit) - Petrol Market in Nigeria breaking down demand. Supply, and regional trends</h2>
+
               <div className="space-y-4">
-                <p className="text-white">
-                  Region: {pmsSummary.detailed.region}
-                </p>
-                <p className="text-white">
-                  State: {pmsSummary.detailed.state}
-                </p>
-                <p className="text-white">
-                  Price Range: {pmsSummary.detailed.priceRange}
-                </p>
-                <p className="text-white">
-                  Average Price (Last Week): {pmsSummary.detailed.averagePriceLastWeek}
-                </p>
+                <div className="flex text-white">
+                    <h4 className="text-md font-medium">Demand</h4>
+                </div>
+                <ul className="px-4">
+                    <li  className="text-[#5c5d5e] list-disc">Nigeria consumes approximately 40-50 million liters of PMS per day.</li>
+                    <li className="text-[#5c5d5e] list-disc">
+                        Demand is driven by:
+                        <ul className="list-disc pl-4">
+                            <li>Transportation (70-80%): cars, buses, trucks, motorcycles.</li>
+                            <li>Industrial and commercial activities (15-20%): generators, machinery.</li>
+                            <li>Residential use (5-10%): cooking, lighting.</li>
+                        </ul>
+                    </li>
+                </ul>
               </div>
+
+              <div className="space-y-4">
+                <div className="flex text-white">
+                    <h4 className="text-md font-medium">Supply</h4>
+                </div>
+                <ul className="px-4">
+                    <li  className="text-[#5c5d5e] list-disc">Nigeria relies heavily on imported PMS (95-100%) due to limited refining capacity</li>
+                    <li  className="text-[#5c5d5e] list-disc">
+                        Local refining capacity: 
+                        <ul className="list-disc pl-4">
+                            <li>NNPC</li>
+                            <li>Private refineries (e.g, Dangote Refinery): under construction or newly commissioned</li>
+                        </ul>
+                    </li>
+                    <li  className="text-[#5c5d5e] list-disc">
+                        Importation challenges: 
+                        <ul className="list-disc pl-4">
+                            <li>Foreign exchange rates</li>
+                            <li>Foreign exchange rates</li>
+                            <li>Supply chain disruptions</li>
+                            <li>Quality control issues</li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex justify-between text-white">
+                    <h4 className="text-md font-medium">Regional Breakdown</h4>
+                </div>
+              </div>
+
             </div>
           </div>
         )}

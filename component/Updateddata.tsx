@@ -76,3 +76,46 @@ const Updateddata = () => {
 }
 
 export default Updateddata
+
+
+
+{/* Modal for PMS Summary */}
+// {isModalOpen && (
+//   <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center z-50">
+//     <div className="bg-[#020405] rounded-2xl p-6 w-full max-w-md">
+//       <h3 className="text-lg font-semibold text-white mb-4">Daily Summary</h3>
+//       <button
+//         className="text-white absolute top-4 right-4"
+//         onClick={() => setIsModalOpen(false)}
+//       >
+//         ✕
+//       </button>
+//       <h2 className="text-[#5c5d5e]">Heres a quick summary of the PMS(Premium Motor Spirit) - Petrol Market in Nigeria breaking down demand. Supply, and regional trends</h2>
+
+//       <div className="space-y-4">
+//           <div className="flex justify-between text-white">
+//               <h4 className="text-md font-medium">Petrochem daily wire</h4>
+//               <h4 className="text-md font-medium">August 9, 2024</h4>
+//           </div>
+//         <p className="text-[#5c5d5e]">Nigeria consumes approximately 40-50 million liters of PMS per day. Demand is driven by: Transportation (70-80%): cars, buses, trucks, motorcycles.</p>
+//       </div>
+
+//       <div className="space-y-4">
+//           <div className="flex justify-between text-white">
+//               <h4 className="text-md font-medium">Petrochem daily wire</h4>
+//               <h4 className="text-md font-medium">August 9, 2024</h4>
+//           </div>
+//         <p className="text-[#5c5d5e]">Nigeria consumes approximately 40-50 million liters of PMS per day. Demand is driven by: Transportation (70-80%): cars, buses, trucks, motorcycles.</p>
+//       </div>
+
+//       <div className="space-y-4">
+//           <div className="flex justify-between text-white">
+//               <h4 className="text-md font-medium">Petrochem daily wire</h4>
+//               <h4 className="text-md font-medium">August 9, 2024</h4>
+//           </div>
+//         <p className="text-[#5c5d5e]">Nigeria consumes approximately 40-50 million liters of PMS per day. Demand is driven by: Transportation (70-80%): cars, buses, trucks, motorcycles.</p>
+//       </div>
+
+//     </div>
+//   </div>
+// )}
