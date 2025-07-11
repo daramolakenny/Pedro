@@ -138,7 +138,7 @@ export default function Dashboard() {
         </button>
 
         {/* Sidebar */}
-        <aside className={`bg-[#020405] text-white p-4 ${isSidebarOpen ? "block" : "hidden"} md:block w-full md:w-64`}>
+        <div className={`bg-[#020405] text-white p-4 ${isSidebarOpen ? "block" : "hidden"} md:block w-full md:w-64`}>
           <h1 className="text-bold text-2xl pb-12 px-4 font-bold">
             <span className="text-green-700">Petro</span>data
           </h1>
@@ -216,7 +216,7 @@ export default function Dashboard() {
               </Link>
             </li>
           </ul>
-        </aside>
+        </div>
 
         {/* Main Content */}
         <main className="flex-1 py-6 px-4">

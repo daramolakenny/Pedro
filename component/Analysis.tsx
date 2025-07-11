@@ -8,12 +8,12 @@ const Analysis = () => {
 
   return (
     <div>
-      <div className="flex w-full md:gap-10 mb-2 border-t border-[#5c5d5e]">
+      <div className="flex w-full md:gap-10 mb-2 border-t border-[#24282c]">
         <button
           onClick={() => setActiveTab("retail-price-analysis")}
           className={`px-4 py-2 text-sm font-medium ${
               activeTab === "retail-price-analysis"
-              ? "border-t-2 border-white text-green-700"
+              ? "border-t-2 border-green-500 text-green-700"
               : "text-[#5c5d5e]"
             }`}
         >
@@ -24,7 +24,7 @@ const Analysis = () => {
           onClick={() => setActiveTab("flights-analysis")}
           className={`px-4 py-2 text-sm font-medium ${
             activeTab === "flights-analysis"
-            ? "border-t-2 border-white text-green-700"
+            ? "border-t-2 border-green-500 text-green-700"
               : "text-[#5c5d5e]"
           }`}
         >
@@ -35,7 +35,7 @@ const Analysis = () => {
           onClick={() => setActiveTab("depots-analysis")}
           className={`px-4 py-2 text-sm font-medium ${
               activeTab === "depots-analysis"
-              ? "border-t-2 border-white text-green-700"
+              ? "border-t-2 border-green-500 text-green-700"
               : "text-[#5c5d5e]"
           }`}
         >
@@ -46,7 +46,7 @@ const Analysis = () => {
           onClick={() => setActiveTab("power-analysis")}
           className={`px-4 py-2 text-sm font-medium ${
             activeTab === "power-analysis"
-              ? "border-t-2 border-white text-green-700"
+              ? "border-t-2 border-green-500 text-green-700"
               : "text-[#5c5d5e]"
           }`}
         >
@@ -57,7 +57,7 @@ const Analysis = () => {
           onClick={() => setActiveTab("cargo-analysis")}
           className={`px-4 py-2 text-sm font-medium ${
             activeTab === "cargo-analysis"
-              ? "border-t-2 border-white text-green-700"
+              ? "border-t-2 border-green-500 text-green-700"
               : "text-[#5c5d5e]"
           }`}
         >
@@ -68,7 +68,7 @@ const Analysis = () => {
           onClick={() => setActiveTab("raw-data")}
           className={`px-4 py-2 text-sm font-medium ${
               activeTab === "raw-data"
-              ? "border-t-2 border-white text-green-700"
+              ? "border-t-2 border-green-500 text-green-700"
               : "text-[#5c5d5e]"
             }`}
         >
@@ -79,7 +79,7 @@ const Analysis = () => {
         <RetailCard />
       {/* <div></div> */}
 
-      <div className="flex w-full md:gap-10 border-t border-[#5c5d5e]">
+      <div className="flex w-full md:gap-10 border-t border-[#24282c]">
       </div>
 
       <Search />
