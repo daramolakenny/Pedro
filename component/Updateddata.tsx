@@ -20,7 +20,7 @@ const Updateddata = () => {
             <tbody>
                 <tr className="py-10 border-b border-[#24282c]">
                   <td className="text-start text-white">
-                  LPQ <span className="font-medium text-[#5c5d5e] pl-2">Liquid Petroleum Gas</span>
+                  PMS <span className="font-medium text-[#5c5d5e] pl-2">Premium Motor Spirit</span>
                   </td>
                   <td className="text-start text-[#5c5d5e]">#714.26</td>
                   <td className="text-start text-green-700">+0.37 <span className="text-center p-1.5 text-green-500 rounded-2xl bg-green-700">+0.09%</span></td>
@@ -30,10 +30,30 @@ const Updateddata = () => {
 
                 <tr className="py-10 border-b border-[#24282c]">
                     <td className="text-start text-white">
-                    LPQ <span className="font-medium text-[#5c5d5e] pl-2">Liquid Petroleum Gas</span>
+                    AGO <span className="font-medium text-[#5c5d5e] pl-2">Automotive Gas Oil</span>
                     </td>
-                    <td className="text-start text-[#5c5d5e]">#714.26</td>
-                    <td className="text-start text-orange-500">+0.37 <span className="text-center p-1.5 text-orange-500 rounded-2xl bg-orange-900">+0.09%</span></td>
+                    <td className="text-start text-[#5c5d5e]">#1249.06</td>
+                    <td className="text-start text-orange-500">-0.01 <span className="text-center p-1.5 text-orange-500 rounded-2xl bg-orange-900">-0.34%</span></td>
+                    <td className="py-2 text-start text-white">N/A</td>
+                    <td className="py-2 text-start text-white">N/A</td>
+                </tr>
+
+                <tr className="py-10 border-b border-[#24282c]">
+                    <td className="text-start text-white">
+                    ICE <span className="font-medium text-[#5c5d5e] pl-2">ICE Breut Crude</span>
+                    </td>
+                    <td className="text-start text-[#5c5d5e]">#0.00</td>
+                    <td className="text-start text-green-700">+0.00 <span className="text-center p-1.5 text-green-500 rounded-2xl bg-green-700">+0.00%</span></td>
+                    <td className="py-2 text-start text-white">N/A</td>
+                    <td className="py-2 text-start text-white">N/A</td>
+                </tr>
+
+                <tr className="py-10 border-b border-[#24282c]">
+                    <td className="text-start text-white">
+                    DPK <span className="font-medium text-[#5c5d5e] pl-2">Dual Purpose Kerosene</span>
+                    </td>
+                    <td className="text-start text-[#5c5d5e]">#1088.92</td>
+                    <td className="text-start text-orange-500">+50.90 <span className="text-center p-1.5 text-orange-500 rounded-2xl bg-orange-900">+0.92%</span></td>
                     <td className="py-2 text-start text-white">N/A</td>
                     <td className="py-2 text-start text-white">N/A</td>
                 </tr>
@@ -42,28 +62,8 @@ const Updateddata = () => {
                     <td className="text-start text-white">
                     LPQ <span className="font-medium text-[#5c5d5e] pl-2">Liquid Petroleum Gas</span>
                     </td>
-                    <td className="text-start text-[#5c5d5e]">#714.26</td>
-                    <td className="text-start text-green-700">+0.37 <span className="text-center p-1.5 text-green-500 rounded-2xl bg-green-700">+0.09%</span></td>
-                    <td className="py-2 text-start text-white">N/A</td>
-                    <td className="py-2 text-start text-white">N/A</td>
-                </tr>
-
-                <tr className="py-10 border-b border-[#24282c]">
-                    <td className="text-start text-white">
-                    LPQ <span className="font-medium text-[#5c5d5e] pl-2">Liquid Petroleum Gas</span>
-                    </td>
-                    <td className="text-start text-[#5c5d5e]">#714.26</td>
-                    <td className="text-start text-orange-500">+0.37 <span className="text-center p-1.5 text-orange-500 rounded-2xl bg-orange-900">+0.09%</span></td>
-                    <td className="py-2 text-start text-white">N/A</td>
-                    <td className="py-2 text-start text-white">N/A</td>
-                </tr>
-
-                <tr className="py-10 border-b border-[#24282c]">
-                    <td className="text-start text-white">
-                    LPQ <span className="font-medium text-[#5c5d5e] pl-2">Liquid Petroleum Gas</span>
-                    </td>
-                    <td className="text-start text-[#5c5d5e]">#714.26</td>
-                    <td className="text-start text-orange-500">+0.37 <span className="text-center p-1.5 text-orange-500 rounded-2xl bg-orange-900">+0.09%</span></td>
+                    <td className="text-start text-[#5c5d5e]">#1087.66</td>
+                    <td className="text-start text-orange-500">-36.10 <span className="text-center p-1.5 text-orange-500 rounded-2xl bg-orange-900">-0.67%</span></td>
                     <td className="py-2 text-start text-white">N/A</td>
                     <td className="py-2 text-start text-white">N/A</td>
                 </tr>
