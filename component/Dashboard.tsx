@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { useState } from "react";
 import Link from "next/link";
@@ -9,46 +9,6 @@ type SectionKey = "dashboard" | "analysis" | "newsreport" | "exclusive-report" |
 export default function Dashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<SectionKey>("analysis"); // Typed with SectionKey
-
-  // Static data (no API)
-  const rigData = {
-    totalRigs: 1200,
-    activeRigs: 850,
-    utilizationRate: "70.8%",
-  };
-
-  const marketTrends = [
-    { month: "Jun 2025", pricePerBarrel: "$85.50", trend: "↑ 2.3%" },
-    { month: "May 2025", pricePerBarrel: "$83.70", trend: "↓ 1.1%" },
-    { month: "Apr 2025", pricePerBarrel: "$84.20", trend: "↑ 0.5%" },
-  ];
-
-  const vesselActivity = {
-    psvCount: 300,
-    ahtsCount: 150,
-    operational: "85%",
-  };
-
-  // Simulated data for additional sections
-  const newsReport = [
-    { title: "Oil Prices Rise Amid OPEC Cuts", date: "Jul 10, 2025" },
-    { title: "New Rig Deployed in North Sea", date: "Jul 9, 2025" },
-  ];
-
-  const exclusiveReport = {
-    summary: "Q2 2025 Offshore Activity Report: 15% growth in rig utilization.",
-    downloadLink: "#", // Placeholder
-  };
-
-  const watchlist = [
-    { asset: "Brent Crude", price: "$85.60", change: "+1.2%" },
-    { asset: "WTI Crude", price: "$82.30", change: "-0.5%" },
-  ];
-
-  const settings = {
-    theme: "Dark Mode",
-    notifications: "Enabled",
-  };
 
   // Map activeSection to header titles with typed keys
   const sectionTitles: Record<SectionKey, string> = {
@@ -66,10 +26,7 @@ export default function Dashboard() {
       case "dashboard":
         return (
           <div>
-            <h2 className="text-xl font-semibold text-gray-700">Rig Overview</h2>
-            <p className="mt-2">Total Rigs: <span className="font-bold">{rigData.totalRigs}</span></p>
-            <p>Active Rigs: <span className="font-bold">{rigData.activeRigs}</span></p>
-            <p>Utilization Rate: <span className="font-bold">{rigData.utilizationRate}</span></p>
+            <h2 className="text-xl font-semibold text-gray-700">Coming soon</h2>
           </div>
         );
       case "analysis":
@@ -79,45 +36,25 @@ export default function Dashboard() {
       case "newsreport":
         return (
           <div>
-            <h2 className="text-xl font-semibold text-gray-700">News & Report</h2>
-            <ul className="mt-2 space-y-2">
-              {newsReport.map((item, index) => (
-                <li key={index} className="text-gray-600">
-                  {item.title} - {item.date}
-                </li>
-              ))}
-            </ul>
+            <h2 className="text-xl font-semibold text-gray-700">Coming soon</h2>
           </div>
         );
       case "exclusive-report":
         return (
           <div>
-            <h2 className="text-xl font-semibold text-gray-700">Exclusive Report</h2>
-            <p className="mt-2 text-gray-600">{exclusiveReport.summary}</p>
-            <a href={exclusiveReport.downloadLink} className="mt-2 inline-block text-blue-500 hover:underline">
-              Download Report
-            </a>
+            <h2 className="text-xl font-semibold text-gray-700">Coming soon</h2>
           </div>
         );
       case "watchlist":
         return (
           <div>
-            <h2 className="text-xl font-semibold text-gray-700">Watchlist</h2>
-            <ul className="mt-2 space-y-2">
-              {watchlist.map((item, index) => (
-                <li key={index} className="text-gray-600">
-                  {item.asset}: ${item.price} ({item.change})
-                </li>
-              ))}
-            </ul>
+            <h2 className="text-xl font-semibold text-gray-700">Coming soon</h2>
           </div>
         );
       case "settings":
         return (
           <div>
-            <h2 className="text-xl font-semibold text-gray-700">Settings</h2>
-            <p className="mt-2 text-gray-600">Theme: {settings.theme}</p>
-            <p>Notifications: {settings.notifications}</p>
+            <h2 className="text-xl font-semibold text-gray-700">Coming soon</h2>
           </div>
         );
       default:
