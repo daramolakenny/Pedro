@@ -3,6 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import Analysis from "./Analysis";
+// import { 
+//   BarChart3, 
+//   Settings, 
+//   FileText, 
+//   Star, 
+//   Shield,
+//   TrendingUp,
+//   Database
+// } from 'lucide-react';
 
 type SectionKey = "dashboard" | "analysis" | "newsreport" | "exclusive-report" | "watchlist" | "settings";
 
