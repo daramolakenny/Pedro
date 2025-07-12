@@ -69,9 +69,9 @@ const RetailCard: React.FC = () => {
   ];
   const states: DropdownOption[] = fuelData.map((data) => ({ value: data.State.toLowerCase(), label: data.State }));
   const prices: DropdownOption[] = [
-    { value: "low", label: "Low (< #700)" },
-    { value: "medium", label: "Medium (#700 - #1000)" },
-    { value: "high", label: "High (> #1000)" },
+    { value: "low", label: "Low" },
+    { value: "medium", label: "Medium" },
+    { value: "high", label: "High" },
   ];
 
   const chartData = {
@@ -227,7 +227,7 @@ const RetailCard: React.FC = () => {
             </button>
           </div>
         </div>
-        
+
         <div className="mb-2 sm:mb-4 h-32 sm:h-40 md:h-48">
           <Line data={chartData} options={chartOptions} />
         </div>
